@@ -40,7 +40,7 @@ st.markdown("""
 # Creating a download button with the fetched content
 # st.download_button('Download Resume', pdf_content, key='resume_download')
 # Local path to the PDF file
-local_pdf_path = "E:/Portfolio Website/Piyush Mishra Resume.pdf"
+local_pdf_path = "E:\Piyush portfolio\Piyush Mishra Resume.pdf"
 # Reading the content of the PDF file
 with open(local_pdf_path, "rb") as pdf_file:
     pdf_content = pdf_file.read()
