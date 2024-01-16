@@ -52,11 +52,27 @@ st.write("""
 st.write("""
         Welcome to my portfolio! I am Piyush Mishra, a passionate data enthusiast with a keen interest in the field of data analysis and reporting. Below, you'll find additional information crucial for understanding my capabilities as a data analyst.
         """)
+
 st.write("---")
+
+st.markdown(
+    """
+    <div style="text-align:center;">
+        <h3>Connect with me:</h3>
+        <a href="https://www.linkedin.com/in/pi-mishra/" target="_blank">LinkedIn</a> |
+        <span>piyushmishra898@gmail.com</span> |
+        <span>6206224930</span>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.write("---")
+
 with st.container():
     selected = option_menu(
     menu_title = None,
-    options = ['About','Projects','Powerbi','Contact'],
+    options = ['About','Projects','Powerbi'],
     icons= ['person','code-slash','chat-left-text-fill'],
     orientation= 'horizontal'
     )
@@ -113,6 +129,9 @@ if selected == 'About':
                 - Data Analytics Consulting (KPMG)
                 - Full Stack Data Science (Almabetter)
             """)
+            st.write("---")
+
+
 if selected == 'Powerbi':
     with st.container():
         col7 =st.columns(1)
@@ -157,8 +176,3 @@ Channel 152.0 appears to outperform other channels in terms of policy sales, alt
 After addressing the presence of outliers using the interquartile range method and multicollinearity using the variance inflation factor method, the data was split into training and testing sets. The Synthetic Minority Over-sampling Technique (SMOTE) was used to balance the dataset. A decision tree model performed the best out of all the models evaluated, with a training accuracy of 0.986 and a validation accuracy of 0.876, indicating that it is able to generalize well to unseen data. Logistic regression also performed well, with a validation accuracy of around 0.80, but not as well as the decision tree model. Hyperparameter tuning using random search and grid search did not lead to significant improvements in performance for any of the models.
 In conclusion, based on the evaluation of the models, the decision tree model may be recommended for this project as it provides a high level of accuracy and is able to generalize well. However, further analysis and evaluation may be necessary to determine the best model for this specific project.
                  """)
-if selected == "Contact":
-    st.subheader("""Contacts""")
-    st.write("Email ID - piyushmishra898@gmail.com")
-    st.write("Connect on call or whatsapp - 6206224930")
-    st.markdown("[Click to connect on LinkedIn](https://www.linkedin.com/in/pi-mishra/)")
