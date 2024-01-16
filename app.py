@@ -33,19 +33,19 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-# GitHub URL of the PDF file
-#github_pdf_url = "https://github.com/pi-mishra/portfolio/raw/main/Piyush%20Mishra%20Resume.pdf"
-# Fetching the content of the PDF file
-#pdf_content = requests.get(github_pdf_url).content
-# Creating a download button with the fetched content
-# st.download_button('Download Resume', pdf_content, key='resume_download')
-# Local path to the PDF file
-local_pdf_path = "E:\Piyush portfolio\Piyush Mishra Resume.pdf"
+
 # Reading the content of the PDF file
-with open(local_pdf_path, "rb") as pdf_file:
-    pdf_content = pdf_file.read()
+with open("assets/Piyush Mishra Resume.pdf", "rb") as pdf_file:
+    pdf_bytes = pdf_file.read()
+
 # Creating a download button with the fetched content
-st.download_button('Download Resume', pdf_content, key='resume_download',file_name='Piyush_Mishra_Resume.pdf')
+st.download_button(
+        label="📄 Download my CV",
+        data=pdf_bytes,
+        file_name="Piyush Mishra Resume.pdf",
+        mime="application/pdf",
+    )
+
 st.write("""
         Dear Requiter,
          """)
