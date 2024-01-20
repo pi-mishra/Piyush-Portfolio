@@ -47,11 +47,15 @@ st.download_button(
     )
 
 st.write("""
-        Dear Requiter,
+        Dear Recruiter,
          """)
 st.write("""
-        Welcome to my portfolio! I am Piyush Mishra, a passionate data enthusiast with a keen interest in the field of data analysis and reporting. Below, you'll find additional information crucial for understanding my capabilities as a data analyst.
-        """)
+        
+Greetings! Explore my portfolio to delve into the world of Piyush Mishra, a devoted data enthusiast fueled by a profound interest in the realms of data analysis and reporting. 
+Let me share a brief narrative explaining why, as a BBA finance graduate, I've set my sights on the dynamic field of data analytics. During my tenure at a previous organization, I was tasked with analyzing my colleagues' performance and conducting an overall assessment of customer tickets.
+Presenting these findings to my seniors sparked a genuine fascination for the field of data analytics. 
+         
+         """)
 
 st.write("---")
 
