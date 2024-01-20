@@ -118,7 +118,7 @@ if selected == 'About':
 
             Technical Skills: Python, SQL, Power Bi, DAX, Google Sheets, Excel, Tableau, Scikit-Learn, NumPy, Pandas, Matplotlib, Seaborn
             
-            Soft Skills: Leadership, Problem Solving, E|ective Communication, Teamwork, Conict Resolution
+            Soft Skills: Leadership, Problem Solving, Effective Communication, Teamwork, Conict Resolution
             """
         )
         st.write("---")
