@@ -157,6 +157,16 @@ if selected == 'Powerbi':
             allowFullScreen="true"></iframe>
             """
             st.markdown(power_bi_embed_code, unsafe_allow_html=True)
+    with st.container():
+        col9 =st.columns(1)       
+        with col9[0]:
+            power_bi_embed_code = """
+            <iframe width="1024" height="612" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiYWQ4ZDNhMjUtNzAyMy00YmQ1LWE5NjUtNGFmMzAzMzRmYWJlIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" 
+            frameborder="0" allowFullScreen="true"></iframe>
+            """
+            st.markdown(power_bi_embed_code, unsafe_allow_html=True)
+            
 if selected == "Projects":
     st.subheader("""Rossmann-Sales-Prediction (Capstone project)""")
     st.markdown("[Link to Rossmann Sales Prediction Regression GitHub Repo](https://github.com/pi-mishra/Rossmann-Sales-Prediction-Regression-)")
