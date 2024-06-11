@@ -108,7 +108,7 @@ if selected == 'About':
              
              • Utilized SQL and Excel to perform ACPT analysis, uncovering actionable insights that played a pivotal role in enhancing team productivity and efficiency.
              
-             • Contributed actively to the creation of workow and standard operating procedures for a newly established fashion department, resulting in streamlined operations and a 30% improvement in task completion time.
+             • Contributed actively to the creation of workflow and standard operating procedures for a newly established fashion department, resulting in streamlined operations and a 30% improvement in task completion time.
             """)
 
             st.subheader("""
