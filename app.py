@@ -153,7 +153,8 @@ if selected == 'About':
 
 if selected == 'Projects':
 
-    page_names = ["Sales Dashboard (PowerBi)", "Nike Sales Analysis (PowerBi)", "Real State Analysis (PowerBi)", "Rossmann Sales Prediction (Python)","HEALTH INSURANCE CROSS SELL PREDICTION (Python)"]
+    page_names = ["Sales Dashboard (PowerBi)", "Nike Sales Analysis (PowerBi)", "Real State Analysis (PowerBi)", "Rossmann Sales Prediction (Python)","HEALTH INSURANCE CROSS SELL PREDICTION (Python)" ,
+                  "Netflix Dashboard (Tableau)"]
 
     st.sidebar.title("Projects")
 
@@ -200,7 +201,7 @@ if selected == 'Projects':
             st.subheader("""Rossmann-Sales-Prediction (Python)""")
             st.markdown("[Link to Rossmann Sales Prediction Regression GitHub Repo](https://github.com/pi-mishra/Rossmann-Sales-Prediction-Regression-)")
             st.write("""
-                    Summary
+                   Summary
                     This project involved merging two datasets into one dataframe called all_store, which had 1017209 rows and 18 columns. The dataframe consisted of int, object, and float datatypes, and object datatypes were later converted to int. There were no duplicate values, but six columns had null values that needed to be treated.
                     To better understand the data the year, month, and day from the "date" column were extracted and then dropped. The "Open" column was also dropped since no sales occurred when stores were closed. Furthermore, 49% of data was missing from columns "Promo2SinceWeek," "Promo2SinceYear," and "PromoInterval," so they were dropped. Considering date as categories we have filled ‘CompetitionOpenSinceMonth’ and 'CompetitionOpenSinceYear' with mode. Considering there is no competition or the competion is so far that there is no account of the data, so filling null values with 0.
                     The most common type of store was "a" with 551,627, followed by "d" with 312,912, "c" with 136,840, and "b" with 15,830. It was discovered that store type and sales were correlated, with more stores leading to more sales. Monday had the highest number of sales, followed by Tuesday, Friday, Wednesday, Thursday, Saturday, and Sunday. Similarly, average sales for different days of the week followed the same trend. Store B had higher average sales than other stores C, A, and D, respectively. Monthly sales over the year increased, with an increase in the number of stores leading to more customers' visits and higher sales. Sales data were right-skewed, and 17% of stores were affected by the closure of public schools. No promos were run on Saturday and Sunday, and sales increased when the promo was used.
@@ -220,7 +221,44 @@ if selected == 'Projects':
                     After addressing the presence of outliers using the interquartile range method and multicollinearity using the variance inflation factor method, the data was split into training and testing sets. The Synthetic Minority Over-sampling Technique (SMOTE) was used to balance the dataset. A decision tree model performed the best out of all the models evaluated, with a training accuracy of 0.986 and a validation accuracy of 0.876, indicating that it is able to generalize well to unseen data. Logistic regression also performed well, with a validation accuracy of around 0.80, but not as well as the decision tree model. Hyperparameter tuning using random search and grid search did not lead to significant improvements in performance for any of the models.
                     In conclusion, based on the evaluation of the models, the decision tree model may be recommended for this project as it provides a high level of accuracy and is able to generalize well. However, further analysis and evaluation may be necessary to determine the best model for this specific project.
                     """)
+            
+        elif st.session_state.selected_page == "Netflix Dashboard (Tableau)":
+            tableau_embed_code = """
+            <div class='tableauPlaceholder' id='viz1718117309958' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Netflix ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;NetflixmovieandTVseriesdashboard&#47;Netflix&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='NetflixmovieandTVseriesdashboard&#47;Netflix' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;NetflixmovieandTVseriesdashboard&#47;Netflix&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1718117309958');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1400px';vizElement.style.height='827px';} 
+                else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1400px';vizElement.style.height='827px';} 
+                else { vizElement.style.width='100%';vizElement.style.height='2277px';} 
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            """
 
+            st.components.v1.html(tableau_embed_code, height=850, scrolling=True)
 
         else:
             st.write("No page selected")
