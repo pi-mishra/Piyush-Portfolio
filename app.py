@@ -89,7 +89,7 @@ if selected == 'About':
 
             st.subheader("""
             Process Manager Data Analyst (Indiafilings)
-            (Feb 2021 - Present, Navi-Mumbai)
+            (Feb 2024 - Present, Navi-Mumbai)
                          
             • Data-Driven Process Optimization: Leveraged data analysis to identify and implement process improvements, leading to increased sales and improved customer service. Collaborated with cross-functional teams to streamline workflows and enhance operational efficiency.
                          
